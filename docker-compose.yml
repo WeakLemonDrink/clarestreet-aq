@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  flask-app:
+    build:
+      context: .
+    environment:
+      - FLASK_APP=app
+      - FLASK_ENV=development
+    command: >
+      bash -c "flask run -h 0.0.0.0 -p 8000"
+    expose:
+      - "8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
