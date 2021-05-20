@@ -10,4 +10,4 @@ WORKDIR /code/$code_location
 
 RUN pip install pip
 RUN pip install pipenv
-RUN pipenv install --dev --system --ignore-pipfile
+RUN pipenv install --system --ignore-pipfile
