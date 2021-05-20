@@ -1,5 +1,5 @@
-FROM tiangolo/uwsgi-nginx-flask:python3.6-alpine3.7
-RUN apk --update add bash nano gcc libc-dev g++ libffi-dev
+FROM python:3
+ENV PYTHONUNBUFFERED=1
 
 ARG code_location
 RUN mkdir /code
@@ -8,5 +8,6 @@ WORKDIR /code
 COPY . /code/
 WORKDIR /code/$code_location
 
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install pip
+RUN pip install pipenv
+RUN pipenv install --dev --system --ignore-pipfile
