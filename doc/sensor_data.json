@@ -1,0 +1,14 @@
+{
+    "esp8266id": "14907210",
+    "software_version": "NRZ-2020-133",
+    "BME280_humidity_pc": "60.00",
+    "BME280_pressure_hpa": "102184.50",
+    "BME280_temperature_deg_c": "9.27",
+    "interval": "145000",
+    "max_micro": "20049",
+    "min_micro":  "28",
+    "samples_per_sec": "5003746",
+    "SDS_P1_ppm": "16.85",
+    "SDS_P2_ppm": "4.35",
+    "signal_dbm": "-85"
+}
