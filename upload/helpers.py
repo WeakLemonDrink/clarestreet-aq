@@ -23,7 +23,7 @@ def preprocess_uploaded_json(uploaded_json):
     '''
 
     # Convert to dict
-    uploaded_dict = json.load(uploaded_json)
+    uploaded_dict = json.loads(uploaded_json)
 
     sensordatavalues = uploaded_dict.pop('sensordatavalues', None)
 
@@ -35,4 +35,4 @@ def preprocess_uploaded_json(uploaded_json):
             if field_name:
                 uploaded_dict[field_name] = value_pair['value']
 
-    return json.dumps(uploaded_dict)
+    return uploaded_dict
