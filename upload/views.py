@@ -1,15 +1,19 @@
-from rest_framework.viewsets import ModelViewSet
+from rest_framework import mixins, viewsets
+from rest_framework.renderers import JSONRenderer
 
 from upload.helpers import preprocess_uploaded_json
 from upload.models import SensorData
 from upload.serializers import SensorDataSerializer
 
 
-class SensorDataViewSet(ModelViewSet):  # pylint:disable=too-many-ancestors
+class SensorDataViewSet(mixins.CreateModelMixin,
+                        mixins.ListModelMixin,
+                        viewsets.GenericViewSet):
     """
     Viewset for creating and retrieving `SensorData` entries
     """
     queryset = SensorData.objects.all()
+    renderer_classes = [JSONRenderer]
     serializer_class = SensorDataSerializer
 
     def create(self, request, *args, **kwargs):
