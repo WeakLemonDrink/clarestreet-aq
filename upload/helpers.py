@@ -1,6 +1,3 @@
-import json
-
-
 # Defines how uploaded json fields map to `SensorData` model fields
 UPLOADED_JSON_FIELD_MAP = {
     'BME280_humidity': 'BME280_humidity_pc',
@@ -16,16 +13,12 @@ UPLOADED_JSON_FIELD_MAP = {
 }
 
 
-def preprocess_uploaded_json(uploaded_json):
+def preprocess_uploaded_json(request_data):
     '''
-    Function takes input `uploaded_json` and outputs refactored json to suit a
+    Function takes input `request_data` and outputs refactored dict to suit a
     default `SensorData` model serializer
     '''
-
-    # Convert to dict
-    uploaded_dict = json.loads(uploaded_json)
-
-    sensordatavalues = uploaded_dict.pop('sensordatavalues', None)
+    sensordatavalues = request_data.pop('sensordatavalues', None)
 
     if sensordatavalues:
         for value_pair in sensordatavalues:
@@ -33,6 +26,6 @@ def preprocess_uploaded_json(uploaded_json):
             field_name = UPLOADED_JSON_FIELD_MAP.get(value_pair['value_type'], None)
 
             if field_name:
-                uploaded_dict[field_name] = value_pair['value']
+                request_data[field_name] = value_pair['value']
 
-    return uploaded_dict
+    return request_data

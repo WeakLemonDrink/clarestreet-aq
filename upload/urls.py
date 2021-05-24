@@ -1,8 +1,8 @@
-from django.urls import path
+from rest_framework import routers
 
-from upload import views
+from upload.views import SensorDataViewSet
 
 
-urlpatterns = [
-    path('', views.upload, name='upload'),
-]
+router = routers.SimpleRouter()
+router.register(r'sensor-data', SensorDataViewSet)
+urlpatterns = router.urls
