@@ -16,6 +16,7 @@ Including another URLconf
 
 
 from django.urls import include, path
+from django.views.generic import TemplateView
 
 from rest_framework import routers
 
@@ -26,5 +27,7 @@ router = routers.SimpleRouter()
 router.register(r'sensor-data', SensorDataViewSet)
 
 urlpatterns = [
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
     path('', include(router.urls)),
 ]
