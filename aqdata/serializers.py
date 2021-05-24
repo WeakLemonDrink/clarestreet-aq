@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from upload import models
+from aqdata.models import SensorData
 
 
 class SensorDataSerializer(serializers.ModelSerializer):
@@ -14,4 +14,4 @@ class SensorDataSerializer(serializers.ModelSerializer):
                   'BME280_temperature_deg_c', 'interval', 'max_micro', 'min_micro',
                   'samples_per_sec', 'SDS_P1_ppm', 'SDS_P2_ppm', 'signal_dbm']
         read_only_fields = ['upload_time']
-        model = models.SensorData
+        model = SensorData

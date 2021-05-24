@@ -1,8 +1,8 @@
 from django.test import TestCase
 
-from upload.models import SensorData
-from upload.serializers import SensorDataSerializer
-from upload.tests.utils import load_test_json_data
+from aqdata.models import SensorData
+from aqdata.serializers import SensorDataSerializer
+from aqdata.tests.utils import load_test_json_data
 
 
 class SensorDataSerializerTests(TestCase):

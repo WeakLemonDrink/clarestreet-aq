@@ -4,8 +4,8 @@ import os
 from django.conf import settings
 from django.test import TestCase
 
-from upload.helpers import preprocess_uploaded_json
-from upload.tests.utils import load_test_json_data
+from aqdata.helpers import preprocess_uploaded_json
+from aqdata.tests.utils import load_test_json_data
 
 class PreprocessUploadedJsonTests(TestCase):
     '''

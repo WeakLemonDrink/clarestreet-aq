@@ -5,8 +5,8 @@ from django.urls import reverse
 
 from rest_framework import status
 
-from upload.models import SensorData
-from upload.tests.utils import load_test_json_data
+from aqdata.models import SensorData
+from aqdata.tests.utils import load_test_json_data
 
 
 class SensorDataViewSetTests(TestCase):

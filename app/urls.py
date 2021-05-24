@@ -14,8 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+
 from django.urls import include, path
 
+from rest_framework import routers
+
+from aqdata.views import SensorDataViewSet
+
+
+router = routers.SimpleRouter()
+router.register(r'sensor-data', SensorDataViewSet)
+
 urlpatterns = [
-    path('upload/', include('upload.urls')),
+    path('', include(router.urls)),
 ]
