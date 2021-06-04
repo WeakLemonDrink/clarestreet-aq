@@ -3,5 +3,58 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h1>Clare Street Air Quality</h1>
+<div class="row">
+    <p>Live air quality readings on <a href="https://goo.gl/maps/rGwLviQrdUozsfFv9" style="text-decoration: none;" target="_blank">Clare Street, Redfield, Bristol BS5 9ED (opens in a new window)</a>.</p>
+    <p>Last updated dd/mm/yyyy 00:00</p>
+</div>
+<div class="row">
+    <h2>Particulate Matter</h2>
+</div>
+<div class="row">
+    <div class="col-sm-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">00.00 <small>&micro;/m<sup>3</sup></small></h2>
+                <h5 class="card-text text-muted">PM 10</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">00.00 <small>&micro;/m<sup>3</sup></small></h2>
+                <h5 class="card-text text-muted">PM 2.5</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <h2>Atmospheric Conditions</h2>
+</div>
+<div class="row">
+    <div class="col-sm-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">00.00 <small>&deg;C</small></h2>
+                <h5 class="card-text text-muted">Temperature</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">00.00 <small>%H</small></h2>
+                <h5 class="card-text text-muted">Humidity</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">0000.00 <small>hPa</small></h2>
+                <h5 class="card-text text-muted">Pressure</h5>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
