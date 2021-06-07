@@ -20,14 +20,14 @@ from django.views.generic import TemplateView
 
 from rest_framework import routers
 
-from aqdata.views import SensorDataViewSet
+from aqdata.views import HomeView, SensorDataViewSet
 
 
 router = routers.SimpleRouter()
 router.register(r'sensor-data', SensorDataViewSet)
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('', HomeView.as_view(), name='home'),
     path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
     path('data/', TemplateView.as_view(template_name='data.html'), name='data'),
     path('', include(router.urls)),

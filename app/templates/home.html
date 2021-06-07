@@ -4,8 +4,8 @@
 
 {% block content %}
 <div class="row">
-    <p>Live air quality readings on <a href="https://goo.gl/maps/rGwLviQrdUozsfFv9" style="text-decoration: none;" target="_blank">Clare Street, Redfield, Bristol BS5 9ED (opens in a new window)</a>.</p>
-    <p>Last updated dd/mm/yyyy 00:00</p>
+    <p>Live air quality readings on <a href="https://goo.gl/maps/rGwLviQrdUozsfFv9" style="text-decoration: none;" target="_blank">Clare Street, Redfield, Bristol BS5 9ED</a>.</p>
+    <p>Last updated {{ latest_sensor_data.upload_time|date:"l jS F P e" }}</p>
 </div>
 <div class="row">
     <h2>Particulate Matter</h2>
@@ -14,7 +14,7 @@
     <div class="col-sm-4 mb-3">
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">00.00 <small>&micro;/m<sup>3</sup></small></h2>
+                <h2 class="card-title">{{ latest_sensor_data.SDS_P1_ppm|floatformat:2 }} <small>&micro;/m<sup>3</sup></small></h2>
                 <h5 class="card-text text-muted">PM 10</h5>
             </div>
         </div>
@@ -22,7 +22,7 @@
     <div class="col-sm-4 mb-3">
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">00.00 <small>&micro;/m<sup>3</sup></small></h2>
+                <h2 class="card-title">{{ latest_sensor_data.SDS_P2_ppm|floatformat:2 }} <small>&micro;/m<sup>3</sup></small></h2>
                 <h5 class="card-text text-muted">PM 2.5</h5>
             </div>
         </div>
@@ -35,7 +35,7 @@
     <div class="col-sm-4 mb-3">
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">00.00 <small>&deg;C</small></h2>
+                <h2 class="card-title">{{ latest_sensor_data.BME280_temperature_deg_c|floatformat:2 }} <small>&deg;C</small></h2>
                 <h5 class="card-text text-muted">Temperature</h5>
             </div>
         </div>
@@ -43,7 +43,7 @@
     <div class="col-sm-4 mb-3">
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">00.00 <small>%H</small></h2>
+                <h2 class="card-title">{{ latest_sensor_data.BME280_humidity_pc|floatformat:2 }} <small>%H</small></h2>
                 <h5 class="card-text text-muted">Humidity</h5>
             </div>
         </div>
@@ -51,7 +51,7 @@
     <div class="col-sm-4 mb-3">
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">0000.00 <small>hPa</small></h2>
+                <h2 class="card-title">{{ latest_sensor_data.BME280_pressure_hpa|floatformat:2 }} <small>hPa</small></h2>
                 <h5 class="card-text text-muted">Pressure</h5>
             </div>
         </div>
