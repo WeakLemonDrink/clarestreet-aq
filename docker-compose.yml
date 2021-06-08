@@ -19,6 +19,7 @@ services:
       - DATABASE_URL=postgres://postgres@db:5432/postgres
       - DATABASE_USER=postgres
       - DEBUG=True
+      - DJANGO_SETTINGS_MODULE=app.settings.development
     command: >
       bash -c "python manage.py migrate
       && python manage.py runserver 0.0.0.0:8000"
