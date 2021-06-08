@@ -8,6 +8,7 @@ django = "*"
 python-decouple = "*"
 psycopg2-binary = "*"
 djangorestframework = "*"
+gunicorn = "*"
 
 [dev-packages]
 pylint = "*"
