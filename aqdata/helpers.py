@@ -28,4 +28,9 @@ def preprocess_uploaded_json(request_data):
             if field_name:
                 request_data[field_name] = value_pair['value']
 
+    # Convert incoming pressure in Pa to hPa
+    if request_data['BME280_pressure_hpa']:
+        pressure_pa = float(request_data['BME280_pressure_hpa'])
+        request_data['BME280_pressure_hpa'] = str(pressure_pa * (10**-2))
+
     return request_data

@@ -2,7 +2,7 @@
     "esp8266id": "14907210",
     "software_version": "NRZ-2020-133",
     "BME280_humidity_pc": "60.00",
-    "BME280_pressure_hpa": "102184.50",
+    "BME280_pressure_hpa": "1021.845",
     "BME280_temperature_deg_c": "9.27",
     "interval": "145000",
     "max_micro": "20049",
