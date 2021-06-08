@@ -9,6 +9,7 @@ python-decouple = "*"
 psycopg2-binary = "*"
 djangorestframework = "*"
 gunicorn = "*"
+dj-database-url = "*"
 
 [dev-packages]
 pylint = "*"
