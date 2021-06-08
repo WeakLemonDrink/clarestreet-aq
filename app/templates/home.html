@@ -3,6 +3,7 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+{% if latest_sensor_data %}
 <div class="row">
     <p>Live air quality readings on <a href="https://goo.gl/maps/rGwLviQrdUozsfFv9" style="text-decoration: none;" target="_blank">Clare Street, Redfield, Bristol BS5 9ED</a>.</p>
     <p>Last updated {{ latest_sensor_data.upload_time|date:"l jS F P e" }}</p>
@@ -57,4 +58,9 @@
         </div>
     </div>
 </div>
+{% else %}
+<div class="row">
+    <p>There is no data yet!</p>
+</div>
+{% endif %}
 {% endblock %}

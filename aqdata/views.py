@@ -19,7 +19,9 @@ class HomeView(TemplateView):
         Add the latest sensor data to the context
         """
         context = super().get_context_data(**kwargs)
-        context['latest_sensor_data'] = SensorData.objects.latest('upload_time')
+        # Make sure data exists before adding it to the context
+        if SensorData.objects.exists():
+            context['latest_sensor_data'] = SensorData.objects.latest('upload_time')
         return context
 
 
