@@ -15,9 +15,7 @@ ALLOWED_HOSTS = ['air-bs5.herokuapp.com']
 
 # Heroku db config
 DATABASES = {
-    "default": {
-        dj_database_url.config(conn_max_age=500)
-    }
+    "default": dj_database_url.config(conn_max_age=500)
 }
 
 LOGGING = {
