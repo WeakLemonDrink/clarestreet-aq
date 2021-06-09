@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object model="aqdata.sensordata" pk="1">
+        <field name="esp8266id" type="IntegerField">14907210</field>
+        <field name="software_version" type="CharField">NRZ-2020-133</field>
+        <field name="upload_time" type="DateTimeField">2021-06-09T07:39:42.047572+00:00</field>
+        <field name="BME280_humidity_pc" type="FloatField">60.0</field>
+        <field name="BME280_pressure_hpa" type="FloatField">1021.845</field>
+        <field name="BME280_temperature_deg_c" type="FloatField">9.27</field>
+        <field name="interval" type="IntegerField">145000</field>
+        <field name="max_micro" type="IntegerField">20049</field>
+        <field name="min_micro" type="IntegerField">28</field>
+        <field name="samples_per_sec" type="IntegerField">5003746</field>
+        <field name="SDS_P1_ppm" type="FloatField">16.85</field>
+        <field name="SDS_P2_ppm" type="FloatField">4.35</field>
+        <field name="signal_dbm" type="IntegerField">-85</field>
+    </object>
+</django-objects>
