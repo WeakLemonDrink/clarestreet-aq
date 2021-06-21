@@ -11,7 +11,7 @@ from aqdata.tests.utils import load_test_json_data
 
 
 @freeze_time("2021-06-21T14:16:21.421Z")
-class GetDataGradient(TestCase):
+class GetDataGradientTests(TestCase):
     '''
     Tests for the `get_data_gradient` helper function
     '''
@@ -23,6 +23,41 @@ class GetDataGradient(TestCase):
         Nlaja
         '''
         self.assertTrue(helpers.get_data_gradient('BME280_humidity_pc'))
+
+
+class GetTrendTests(TestCase):
+    '''
+    Tests for the `get_trend` helper function
+    '''
+    def test_value_positive_returns_rising(self):
+        '''
+        An input value of 0.011 should return 1 (rising)
+        '''
+        self.assertEqual(helpers.get_trend(0.011), 1)
+
+    def test_value_positive_returns_flat(self):
+        '''
+        An input value of 0.010 should return 0 (flat)
+        '''
+        self.assertEqual(helpers.get_trend(0.010), 0)
+
+    def test_value_0_returns_flat(self):
+        '''
+        An input value of 0.000 should return 0 (flat)
+        '''
+        self.assertEqual(helpers.get_trend(0.000), 0)
+
+    def test_value_negative_returns_flat(self):
+        '''
+        An input value of -0.010 should return 0 (flat)
+        '''
+        self.assertEqual(helpers.get_trend(-0.010), 0)
+
+    def test_value_negative_returns_falling(self):
+        '''
+        An input value of -0.011 should return -1 (falling)
+        '''
+        self.assertEqual(helpers.get_trend(-0.011), -1)
 
 
 class PreprocessUploadedJsonTests(TestCase):

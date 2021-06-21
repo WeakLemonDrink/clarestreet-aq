@@ -40,6 +40,26 @@ def get_data_gradient(field):
 
     return m
 
+def get_trend(gradient):
+    '''
+    Returns
+     * 1 (rising) if gradient is > `upper_threshold`
+     * 0 (flat) if `lower_threshold` <= gradient <= `upper_threshold`
+     * -1 (falling) if gradient is < `lower_threshold`
+    '''
+
+    upper_threshold = 0.01
+    lower_threshold = -0.01
+
+    if gradient > upper_threshold:
+        value = 1
+    elif lower_threshold <= gradient <= upper_threshold:
+        value = 0
+    else:
+        value = -1
+
+    return value
+
 
 def preprocess_uploaded_json(request_data):
     '''
