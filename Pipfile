@@ -10,10 +10,12 @@ psycopg2-binary = "*"
 djangorestframework = "*"
 gunicorn = "*"
 dj-database-url = "*"
+numpy = "*"
 
 [dev-packages]
 pylint = "*"
 pylint-django = "*"
+freezegun = "*"
 
 [requires]
 python_version = "3.8"
