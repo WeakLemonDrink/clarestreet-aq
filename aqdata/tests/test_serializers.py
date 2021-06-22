@@ -9,7 +9,7 @@ class TestSensorDataSerializer:
     '''
     Tests for the `SensorDataSerializer` model serializer
     '''
-    def test_deserializer_is_valid_true(self, upload_data):  #pylint:disable=no-self-use
+    def test_deserializer_is_valid_true(self, upload_data):
         '''
         `SensorDataSerializer` model serializer should create a new `SensorData`
         model entry if valid json data is supplied
@@ -23,7 +23,7 @@ class TestSensorDataSerializer:
 
         assert serializer.is_valid() is True
 
-    def test_deserializer_creates_new_entry(self, upload_data):  #pylint:disable=no-self-use
+    def test_deserializer_creates_new_entry(self, upload_data):
         '''
         `SensorDataSerializer` model serializer should create a new `SensorData`
         model entry if valid json data is supplied

@@ -28,24 +28,31 @@ def get_data_gradient(field):
     `sensordata.field` data using `numpy.polyfit`
     Returns the `m` component of the resulting `mx + c` returned by `numpy.polyfit`
     '''
+    # Return `0.000` by default
+    m = 0.000  # pylint:disable=invalid-name
+
     an_hour_ago = timezone.now() - datetime.timedelta(hours=1)
 
     # Grab the last hours worth of `sensordata`
     qs = SensorData.objects.filter(upload_time__gte=an_hour_ago)
 
-    # Return the `field` values from this queryset
-    data = qs.values_list(field, flat=True)
-    # Fit the data to a first order polynomial and return the `m` component
-    m, _ = np.polyfit(np.arange(0, len(data)), np.array(data), 1)  # pylint:disable=invalid-name
+    if qs.exists() and qs.count() > 1:
+        # Return the `field` values from this queryset
+        data = qs.values_list(field, flat=True)
+
+        # Make sure there are no `None` values in the data
+        if None not in data:
+            # Fit the data to a first order polynomial and return the `m` component
+            m, _ = np.polyfit(np.arange(0, len(data)), np.array(data), 1)  # pylint:disable=invalid-name
 
     return m
 
 def get_trend(gradient):
     '''
     Returns
-     * 1 (rising) if gradient is > `upper_threshold`
-     * 0 (flat) if `lower_threshold` <= gradient <= `upper_threshold`
-     * -1 (falling) if gradient is < `lower_threshold`
+     * 1 (rising) if `gradient` is > `upper_threshold`
+     * 0 (flat) if `lower_threshold` <= `gradient` <= `upper_threshold`
+     * -1 (falling) if `gradient` is < `lower_threshold`
     '''
 
     upper_threshold = 0.01

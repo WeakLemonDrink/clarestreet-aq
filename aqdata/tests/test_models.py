@@ -1,21 +1,19 @@
 import pytest
 
-from aqdata.models import SensorData
-
 
 @pytest.mark.django_db
-class TestSensorDataModel:  #pylint:disable=too-few-public-methods
+class TestSensorDataModel:
     '''
-    `TestCase` class for the `SensorData` model
+    Tests for the `SensorData` model
     '''
-    def test_model_str_method_returns_correct_string(self):  #pylint:disable=no-self-use
+    def test_model_str_method_returns_correct_string(self, sensor_data):
         '''
         `SensorData` model `str()` method should return a string in the format:
           <id> <timestamp.isoformat()>
         '''
-        # Make a `SensorData` entry
-        entry = SensorData.objects.create(esp8266id=14907210, software_version='NRZ-2020-133')
+        expected_str = '{!s} {}'.format(
+          sensor_data.id,
+          sensor_data.upload_time.strftime('%Y-%m-%d %H:%M:%S')
+        )
 
-        expected_str = '{!s} {}'.format(entry.id, entry.upload_time.strftime('%Y-%m-%d %H:%M:%S'))
-
-        assert str(entry) == expected_str
+        assert str(sensor_data) == expected_str
