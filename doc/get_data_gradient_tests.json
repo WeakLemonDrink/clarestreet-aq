@@ -1,0 +1,477 @@
+[
+{
+    "model": "aqdata.sensordata",
+    "pk": 7247,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:14:47.937Z",
+        "BME280_humidity_pc": 53.87,
+        "BME280_pressure_hpa": 1010.7325000000001,
+        "BME280_temperature_deg_c": 17.41,
+        "interval": 145000,
+        "max_micro": 20053,
+        "min_micro": 29,
+        "samples_per_sec": 4866858,
+        "SDS_P1_ppm": 5.8,
+        "SDS_P2_ppm": 2.83,
+        "signal_dbm": -81
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7248,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:17:25.558Z",
+        "BME280_humidity_pc": 53.76,
+        "BME280_pressure_hpa": 1010.6166000000001,
+        "BME280_temperature_deg_c": 17.58,
+        "interval": 145000,
+        "max_micro": 20049,
+        "min_micro": 29,
+        "samples_per_sec": 4867240,
+        "SDS_P1_ppm": 7.53,
+        "SDS_P2_ppm": 3.0,
+        "signal_dbm": -81
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7249,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:19:54.819Z",
+        "BME280_humidity_pc": 53.71,
+        "BME280_pressure_hpa": 1010.2038000000001,
+        "BME280_temperature_deg_c": 17.43,
+        "interval": 145000,
+        "max_micro": 20053,
+        "min_micro": 29,
+        "samples_per_sec": 4849489,
+        "SDS_P1_ppm": 5.45,
+        "SDS_P2_ppm": 3.65,
+        "signal_dbm": -82
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7250,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:22:48.422Z",
+        "BME280_humidity_pc": 53.52,
+        "BME280_pressure_hpa": 1010.6125000000001,
+        "BME280_temperature_deg_c": 17.79,
+        "interval": 145000,
+        "max_micro": 20049,
+        "min_micro": 29,
+        "samples_per_sec": 4848023,
+        "SDS_P1_ppm": 6.1,
+        "SDS_P2_ppm": 3.55,
+        "signal_dbm": -81
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7251,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:25:20.859Z",
+        "BME280_humidity_pc": 53.27,
+        "BME280_pressure_hpa": 1010.5872,
+        "BME280_temperature_deg_c": 17.92,
+        "interval": 145000,
+        "max_micro": 20064,
+        "min_micro": 29,
+        "samples_per_sec": 4850323,
+        "SDS_P1_ppm": 5.38,
+        "SDS_P2_ppm": 2.92,
+        "signal_dbm": -82
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7252,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:28:07.331Z",
+        "BME280_humidity_pc": 52.86,
+        "BME280_pressure_hpa": 1010.7259,
+        "BME280_temperature_deg_c": 17.81,
+        "interval": 145000,
+        "max_micro": 20046,
+        "min_micro": 29,
+        "samples_per_sec": 4860189,
+        "SDS_P1_ppm": 6.63,
+        "SDS_P2_ppm": 3.1,
+        "signal_dbm": -81
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7253,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:30:36.704Z",
+        "BME280_humidity_pc": 51.74,
+        "BME280_pressure_hpa": 1010.7303,
+        "BME280_temperature_deg_c": 17.88,
+        "interval": 145000,
+        "max_micro": 20072,
+        "min_micro": 29,
+        "samples_per_sec": 4863319,
+        "SDS_P1_ppm": 4.57,
+        "SDS_P2_ppm": 2.7,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7254,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:33:24.169Z",
+        "BME280_humidity_pc": 50.43,
+        "BME280_pressure_hpa": 1010.5859,
+        "BME280_temperature_deg_c": 18.08,
+        "interval": 145000,
+        "max_micro": 20054,
+        "min_micro": 29,
+        "samples_per_sec": 4867636,
+        "SDS_P1_ppm": 5.55,
+        "SDS_P2_ppm": 3.13,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7255,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:35:53.940Z",
+        "BME280_humidity_pc": 50.27,
+        "BME280_pressure_hpa": 1010.7591000000001,
+        "BME280_temperature_deg_c": 18.27,
+        "interval": 145000,
+        "max_micro": 20053,
+        "min_micro": 29,
+        "samples_per_sec": 4867493,
+        "SDS_P1_ppm": 3.67,
+        "SDS_P2_ppm": 2.72,
+        "signal_dbm": -81
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7256,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:38:24.914Z",
+        "BME280_humidity_pc": 50.0,
+        "BME280_pressure_hpa": 1010.8516000000001,
+        "BME280_temperature_deg_c": 18.47,
+        "interval": 145000,
+        "max_micro": 20076,
+        "min_micro": 29,
+        "samples_per_sec": 4857148,
+        "SDS_P1_ppm": 6.22,
+        "SDS_P2_ppm": 3.1,
+        "signal_dbm": -82
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7257,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:40:51.715Z",
+        "BME280_humidity_pc": 49.77,
+        "BME280_pressure_hpa": 1010.8000000000001,
+        "BME280_temperature_deg_c": 18.45,
+        "interval": 145000,
+        "max_micro": 20049,
+        "min_micro": 29,
+        "samples_per_sec": 4867561,
+        "SDS_P1_ppm": 5.65,
+        "SDS_P2_ppm": 3.22,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7258,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:43:22.890Z",
+        "BME280_humidity_pc": 49.78,
+        "BME280_pressure_hpa": 1010.9347,
+        "BME280_temperature_deg_c": 18.28,
+        "interval": 145000,
+        "max_micro": 20057,
+        "min_micro": 29,
+        "samples_per_sec": 4868048,
+        "SDS_P1_ppm": 4.1,
+        "SDS_P2_ppm": 2.67,
+        "signal_dbm": -81
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7259,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:45:48.938Z",
+        "BME280_humidity_pc": 50.52,
+        "BME280_pressure_hpa": 1010.8897000000001,
+        "BME280_temperature_deg_c": 18.15,
+        "interval": 145000,
+        "max_micro": 20045,
+        "min_micro": 29,
+        "samples_per_sec": 4869759,
+        "SDS_P1_ppm": 5.4,
+        "SDS_P2_ppm": 2.9,
+        "signal_dbm": -79
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7260,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:48:23.753Z",
+        "BME280_humidity_pc": 50.34,
+        "BME280_pressure_hpa": 1011.0083999999999,
+        "BME280_temperature_deg_c": 18.5,
+        "interval": 145000,
+        "max_micro": 20056,
+        "min_micro": 29,
+        "samples_per_sec": 4876599,
+        "SDS_P1_ppm": 4.45,
+        "SDS_P2_ppm": 3.0,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7261,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:50:59.815Z",
+        "BME280_humidity_pc": 50.83,
+        "BME280_pressure_hpa": 1010.6178,
+        "BME280_temperature_deg_c": 18.13,
+        "interval": 145000,
+        "max_micro": 20045,
+        "min_micro": 29,
+        "samples_per_sec": 4877752,
+        "SDS_P1_ppm": 4.25,
+        "SDS_P2_ppm": 2.83,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7262,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:53:26.277Z",
+        "BME280_humidity_pc": 51.05,
+        "BME280_pressure_hpa": 1010.9928,
+        "BME280_temperature_deg_c": 18.33,
+        "interval": 145000,
+        "max_micro": 20049,
+        "min_micro": 29,
+        "samples_per_sec": 4877651,
+        "SDS_P1_ppm": 6.22,
+        "SDS_P2_ppm": 3.6,
+        "signal_dbm": -81
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7263,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:55:54.196Z",
+        "BME280_humidity_pc": 50.63,
+        "BME280_pressure_hpa": 1011.0159,
+        "BME280_temperature_deg_c": 18.52,
+        "interval": 145000,
+        "max_micro": 20049,
+        "min_micro": 29,
+        "samples_per_sec": 4885141,
+        "SDS_P1_ppm": 5.35,
+        "SDS_P2_ppm": 3.38,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7264,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T13:58:36.253Z",
+        "BME280_humidity_pc": 50.24,
+        "BME280_pressure_hpa": 1010.945,
+        "BME280_temperature_deg_c": 18.25,
+        "interval": 145000,
+        "max_micro": 20432,
+        "min_micro": 29,
+        "samples_per_sec": 4869483,
+        "SDS_P1_ppm": 5.13,
+        "SDS_P2_ppm": 3.7,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7265,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T14:01:11.248Z",
+        "BME280_humidity_pc": 50.56,
+        "BME280_pressure_hpa": 1011.0356,
+        "BME280_temperature_deg_c": 18.21,
+        "interval": 145000,
+        "max_micro": 20085,
+        "min_micro": 29,
+        "samples_per_sec": 4872174,
+        "SDS_P1_ppm": 7.25,
+        "SDS_P2_ppm": 3.35,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7266,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T14:03:39.125Z",
+        "BME280_humidity_pc": 51.08,
+        "BME280_pressure_hpa": 1011.0828,
+        "BME280_temperature_deg_c": 18.3,
+        "interval": 145000,
+        "max_micro": 20050,
+        "min_micro": 29,
+        "samples_per_sec": 4859144,
+        "SDS_P1_ppm": 5.38,
+        "SDS_P2_ppm": 3.22,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7267,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T14:06:08.742Z",
+        "BME280_humidity_pc": 51.07,
+        "BME280_pressure_hpa": 1010.7113,
+        "BME280_temperature_deg_c": 18.19,
+        "interval": 145000,
+        "max_micro": 20054,
+        "min_micro": 29,
+        "samples_per_sec": 4850758,
+        "SDS_P1_ppm": 11.25,
+        "SDS_P2_ppm": 3.6,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7268,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T14:08:36.381Z",
+        "BME280_humidity_pc": 50.9,
+        "BME280_pressure_hpa": 1011.1641000000001,
+        "BME280_temperature_deg_c": 18.54,
+        "interval": 145000,
+        "max_micro": 20053,
+        "min_micro": 29,
+        "samples_per_sec": 4857449,
+        "SDS_P1_ppm": 5.88,
+        "SDS_P2_ppm": 3.58,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7269,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T14:11:16.466Z",
+        "BME280_humidity_pc": 51.06,
+        "BME280_pressure_hpa": 1011.0413000000001,
+        "BME280_temperature_deg_c": 18.53,
+        "interval": 145000,
+        "max_micro": 20049,
+        "min_micro": 29,
+        "samples_per_sec": 4850547,
+        "SDS_P1_ppm": 7.0,
+        "SDS_P2_ppm": 3.4,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7270,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T14:13:47.203Z",
+        "BME280_humidity_pc": 50.92,
+        "BME280_pressure_hpa": 1011.0953000000001,
+        "BME280_temperature_deg_c": 18.52,
+        "interval": 145000,
+        "max_micro": 20050,
+        "min_micro": 29,
+        "samples_per_sec": 4864184,
+        "SDS_P1_ppm": 5.35,
+        "SDS_P2_ppm": 3.33,
+        "signal_dbm": -80
+    }
+},
+{
+    "model": "aqdata.sensordata",
+    "pk": 7271,
+    "fields": {
+        "esp8266id": 14907210,
+        "software_version": "NRZ-2020-133",
+        "upload_time": "2021-06-21T14:16:21.421Z",
+        "BME280_humidity_pc": 50.37,
+        "BME280_pressure_hpa": 1011.1406,
+        "BME280_temperature_deg_c": 18.5,
+        "interval": 145000,
+        "max_micro": 20053,
+        "min_micro": 29,
+        "samples_per_sec": 4855045,
+        "SDS_P1_ppm": 5.7,
+        "SDS_P2_ppm": 2.83,
+        "signal_dbm": -80
+    }
+}
+]
