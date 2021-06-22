@@ -8,6 +8,7 @@ from freezegun import freeze_time
 
 from aqdata import helpers
 from aqdata.models import SensorData
+from aqdata.tests.conftest import FREEZE_TIME
 
 
 @pytest.mark.django_db
@@ -38,7 +39,7 @@ class TestGetDataGradient:
 
         assert result == 0.00
 
-    @freeze_time("2021-06-21T14:16:21.421Z")
+    @freeze_time(FREEZE_TIME)
     def test_function_with_queryset_containing_none(self, sensor_data_set):
         '''
         `get_data_gradient` should return 0.000 if `SensorData` filtered over the last hour returns
@@ -54,7 +55,7 @@ class TestGetDataGradient:
 
         assert result == 0.00
 
-    @freeze_time("2021-06-21T14:16:21.421Z")
+    @freeze_time(FREEZE_TIME)
     @pytest.mark.parametrize(
         'test_input,expected',
         [

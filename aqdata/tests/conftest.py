@@ -9,6 +9,10 @@ from django.test import Client
 from aqdata.models import SensorData
 
 
+# This is the time we can use with `freezegun` for testing with the `sensor_data_set`
+FREEZE_TIME = '2021-06-21T14:16:21.421Z'
+
+
 @pytest.fixture
 def client():
     '''
