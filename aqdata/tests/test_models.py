@@ -1,13 +1,14 @@
-from django.test import TestCase
+import pytest
 
 from aqdata.models import SensorData
 
 
-class SensorDataModelTests(TestCase):
+@pytest.mark.django_db
+class TestSensorDataModel:  #pylint:disable=too-few-public-methods
     '''
     `TestCase` class for the `SensorData` model
     '''
-    def test_model_str_method_returns_correct_string(self):
+    def test_model_str_method_returns_correct_string(self):  #pylint:disable=no-self-use
         '''
         `SensorData` model `str()` method should return a string in the format:
           <id> <timestamp.isoformat()>
@@ -17,4 +18,4 @@ class SensorDataModelTests(TestCase):
 
         expected_str = '{!s} {}'.format(entry.id, entry.upload_time.strftime('%Y-%m-%d %H:%M:%S'))
 
-        self.assertEqual(str(entry), expected_str)
+        assert str(entry) == expected_str
