@@ -112,7 +112,7 @@ class TestPreprocessUploadedJson:
         doc_path = os.path.join(settings.BASE_DIR, 'doc')
 
         processed_json = helpers.preprocess_uploaded_json(upload_data)
-        print("hi")
+
         # Grab expected processed json data from doc file
         with open(os.path.join(doc_path, 'sensor_data.json')) as f:  # pylint:disable=invalid-name
             expected_json = json.load(f)
