@@ -25,3 +25,6 @@ class SensorData(models.Model):
 
     class Meta:
         ordering = ['upload_time']
+
+    def __str__(self):
+        return '{!s} {}'.format(self.id, self.upload_time.strftime('%Y-%m-%d %H:%M:%S'))
