@@ -10,12 +10,16 @@ def set_text_colour(warning_threshold, danger_threshold, value):
     Sets the bootstrap class to `text-success` (green), `text-warning` (orange) or `text-danger`
     (red) depending on input thresholds
     '''
-    if value < warning_threshold:
-        text_class = 'text-success'
-    elif warning_threshold <= value <= danger_threshold:
-        text_class = 'text-warning'
+    if isinstance(value, float):
+        if value < warning_threshold:
+            text_class = 'text-success'
+        elif warning_threshold <= value <= danger_threshold:
+            text_class = 'text-warning'
+        else:
+            text_class = 'text-danger'
     else:
-        text_class = 'text-danger'
+        # If not a float suitable for comparison, just set the text_class to a default
+        text_class = 'text-body'
 
     return text_class
 
