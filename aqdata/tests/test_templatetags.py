@@ -32,18 +32,20 @@ class TestTempColourMap:
     @pytest.mark.parametrize(
         'test_input,expected',
         [
-            (-30.501, ''), # Robustness
+            (-30.501, ''),  # Robustness for large -tve value
             (-30.000, 'background-color: rgb(14, 14, 21); color: rgb(255, 255, 255);'),
             (-29.999, 'background-color: rgb(14, 14, 21); color: rgb(255, 255, 255);'),
             (0.000, 'background-color: rgb(247, 249, 252);'),
-            (None, ''), # Robustness
+            (None, ''),  # Robustness for `None`
+            ('my string', ''),  # Robustness for a string
+            (1, 'background-color: rgb(255, 250, 234);'),  # Robustness for integer
             (9.499, 'background-color: rgb(254, 218, 109);'),
             (9.501, 'background-color: rgb(254, 215, 102);'),
             (10.000, 'background-color: rgb(254, 215, 102);'),
             (10.501, 'background-color: rgb(254, 210, 99);'),
             (49.999, 'background-color: rgb(33, 11, 16); color: rgb(255, 255, 255);'),
             (50.000, 'background-color: rgb(33, 11, 16); color: rgb(255, 255, 255);'),
-            (50.501, ''), # Robustness
+            (50.501, ''),  # Robustness for large +tve value
         ]
     )
     def test_function_returns_correct_temp_map_colour(self, test_input, expected):

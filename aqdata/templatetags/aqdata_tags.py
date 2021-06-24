@@ -1,6 +1,6 @@
 import json
 import os
-from functools import cache
+from functools import lru_cache
 
 from django import template
 from django.conf import settings
@@ -71,7 +71,7 @@ def show_trend(trend):
     return mark_safe(return_str)
 
 
-@cache
+@lru_cache()
 def temp_colour_map_json():
     '''
     Loads dictionary mapping temperature values to rgb colours and stores in memory for further
@@ -90,11 +90,11 @@ def temp_colour_map(value):
     colour_map = temp_colour_map_json()
     return_str = ''
 
-    if value is not None:
-        # Round the input float to an int
+    if isinstance(value, (int, float)):
+        # Round the input to an int
         value = int(round(value))
 
-        # Make value str for searching through valid dict and then returned the mapped value
+        # Make value str for searching through dict and then return the mapped value
         rgb_values = colour_map.get(str(value), None)
 
         if rgb_values:
@@ -105,8 +105,8 @@ def temp_colour_map(value):
             if bg_colour_rgb:
                 return_str += f'background-color: {bg_colour_rgb};'
 
-            # Only apply style to text colour if it is necessary (i.e the background colour clashes with
-            # the default black text used on the rest of the site)
+            # Only apply style to text colour if it is necessary (i.e the background colour
+            # clashes with the default text used on the rest of the site)
             if text_colour_rgb:
                 return_str += f' color: {text_colour_rgb};'
 
