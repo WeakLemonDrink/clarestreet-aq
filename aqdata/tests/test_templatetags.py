@@ -33,18 +33,18 @@ class TestTempColourMap:
         'test_input,expected',
         [
             (-30.501, ''),  # Robustness for large -tve value
-            (-30.000, 'background-color: rgb(14, 14, 21); color: rgb(255, 255, 255);'),
-            (-29.999, 'background-color: rgb(14, 14, 21); color: rgb(255, 255, 255);'),
-            (0.000, 'background-color: rgb(247, 249, 252);'),
+            (-30.000, 'color: rgb(14, 14, 21);'),
+            (-29.999, 'color: rgb(14, 14, 21);'),
+            (0.000, 'color: rgb(247, 249, 252);'),
             (None, ''),  # Robustness for `None`
             ('my string', ''),  # Robustness for a string
-            (1, 'background-color: rgb(255, 250, 234);'),  # Robustness for integer
-            (9.499, 'background-color: rgb(254, 218, 109);'),
-            (9.501, 'background-color: rgb(254, 215, 102);'),
-            (10.000, 'background-color: rgb(254, 215, 102);'),
-            (10.501, 'background-color: rgb(254, 210, 99);'),
-            (49.999, 'background-color: rgb(33, 11, 16); color: rgb(255, 255, 255);'),
-            (50.000, 'background-color: rgb(33, 11, 16); color: rgb(255, 255, 255);'),
+            (1, 'color: rgb(255, 250, 234);'),  # Robustness for integer
+            (9.499, 'color: rgb(254, 218, 109);'),
+            (9.501, 'color: rgb(254, 215, 102);'),
+            (10.000, 'color: rgb(254, 215, 102);'),
+            (10.501, 'color: rgb(254, 210, 99);'),
+            (49.999, 'color: rgb(33, 11, 16);'),
+            (50.000, 'color: rgb(33, 11, 16);'),
             (50.501, ''),  # Robustness for large +tve value
         ]
     )

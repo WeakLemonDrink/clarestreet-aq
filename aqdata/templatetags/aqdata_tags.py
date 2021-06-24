@@ -98,16 +98,11 @@ def temp_colour_map(value):
         rgb_values = colour_map.get(str(value), None)
 
         if rgb_values:
-            bg_colour_rgb = rgb_values.get('background-color', None)
             text_colour_rgb = rgb_values.get('color', None)
-
-            # Build the return string
-            if bg_colour_rgb:
-                return_str += f'background-color: {bg_colour_rgb};'
 
             # Only apply style to text colour if it is necessary (i.e the background colour
             # clashes with the default text used on the rest of the site)
             if text_colour_rgb:
-                return_str += f' color: {text_colour_rgb};'
+                return_str += f'color: {text_colour_rgb};'
 
     return mark_safe(return_str)
