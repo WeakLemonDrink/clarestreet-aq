@@ -1,4 +1,5 @@
 import datetime
+import json
 
 from django.utils import timezone
 
@@ -66,6 +67,14 @@ def get_trend(gradient):
         value = -1
 
     return value
+
+
+def load_json_from_file(file_path):
+    '''
+    Loads json from input `file_path` and returns
+    '''
+    with open(file_path) as f_obj:
+        return json.load(f_obj)
 
 
 def preprocess_uploaded_json(request_data):

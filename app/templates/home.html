@@ -36,7 +36,7 @@
     <div class="col-sm-4 mb-3">
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title"><span style="{% temp_colour_map latest_sensor_data.BME280_temperature_deg_c %}">{% show_trend trends.BME280_temperature_deg_c %} {{ latest_sensor_data.BME280_temperature_deg_c|floatformat:2 }}</span> <small>&deg;C</small></h2>
+                <h2 class="card-title"><span style="{% colour_map 'temperature' latest_sensor_data.BME280_temperature_deg_c %}">{% show_trend trends.BME280_temperature_deg_c %} {{ latest_sensor_data.BME280_temperature_deg_c|floatformat:2 }}</span> <small>&deg;C</small></h2>
                 <h5 class="card-text text-muted">Temperature</h5>
             </div>
         </div>
@@ -44,7 +44,7 @@
     <div class="col-sm-4 mb-3">
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">{% show_trend trends.BME280_humidity_pc %} {{ latest_sensor_data.BME280_humidity_pc|floatformat:2 }} <small>%H</small></h2>
+                <h2 class="card-title"><span style="{% colour_map 'humidity' latest_sensor_data.BME280_humidity_pc %}">{% show_trend trends.BME280_humidity_pc %} {{ latest_sensor_data.BME280_humidity_pc|floatformat:2 }}</span> <small>%H</small></h2>
                 <h5 class="card-text text-muted">Humidity</h5>
             </div>
         </div>
