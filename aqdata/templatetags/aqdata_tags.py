@@ -1,10 +1,11 @@
-import json
 import os
 from functools import lru_cache
 
 from django import template
 from django.conf import settings
 from django.utils.safestring import mark_safe
+
+from aqdata.helpers import load_json_from_file
 
 
 register = template.Library()
@@ -72,42 +73,42 @@ def show_trend(trend):
 
 
 @lru_cache()
-def temp_colour_map_json():
+def colour_map_json(reading):
     '''
-    Loads dictionary mapping temperature values to rgb colours and stores in memory for further
-    use
+    Loads dictionary mapping values to rgb colours and stores in memory for further use
     '''
-    with open(os.path.join(settings.BASE_DIR, 'doc', 'temp_colour_map.json')) as f: # pylint:disable=invalid-name
-        return json.load(f)
+    if reading == 'humidity':
+        file_name = 'humidity_colour_map.json'
+    elif reading == 'temperature':
+        file_name = 'temp_colour_map.json'
+
+    return load_json_from_file(os.path.join(settings.BASE_DIR, 'doc', file_name))
 
 
 @register.simple_tag
-def temp_colour_map(value):
+def colour_map(reading, value):
     '''
-    Return a rgb colour based on the input temperature `value`
+    Loads a colour map from json based on the input `reading` and returns a rgb colour mapped to
+    the nearest `value`
     '''
-    # Load the map values from the json file
-    colour_map = temp_colour_map_json()
     return_str = ''
 
     if isinstance(value, (int, float)):
-        # Round the input to an int
-        value = int(round(value))
+        # Load the map values from the json file
+        map_dict = colour_map_json(reading)
+
+        # Find the nearest value to the options available in the map
+        keys = [int(key) for key in map_dict.keys()]
+        nearest_value = min(keys, key=lambda x:abs(x - value))
 
         # Make value str for searching through dict and then return the mapped value
-        rgb_values = colour_map.get(str(value), None)
+        rgb_values = map_dict.get(str(nearest_value), None)
 
         if rgb_values:
-            bg_colour_rgb = rgb_values.get('background-color', None)
             text_colour_rgb = rgb_values.get('color', None)
 
-            # Build the return string
-            if bg_colour_rgb:
-                return_str += f'background-color: {bg_colour_rgb};'
-
-            # Only apply style to text colour if it is necessary (i.e the background colour
-            # clashes with the default text used on the rest of the site)
+            # Only apply style to text colour if it exists
             if text_colour_rgb:
-                return_str += f' color: {text_colour_rgb};'
+                return_str += f'color: {text_colour_rgb};'
 
     return mark_safe(return_str)
