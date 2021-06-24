@@ -23,7 +23,7 @@
     <div class="col-sm-4 mb-3">
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title"><span class="{% p2_colour_limit latest_sensor_data.SDS_P2_ppm %}">{% show_trend trends.SDS_P2_ppm %} {{ latest_sensor_data.SDS_P2_ppm|floatformat:2 }}</span> <small>&micro;g/m<sup>3</sup></small</h2>
+                <h2 class="card-title"><span class="{% p2_colour_limit latest_sensor_data.SDS_P2_ppm %}">{% show_trend trends.SDS_P2_ppm %} {{ latest_sensor_data.SDS_P2_ppm|floatformat:2 }}</span> <small>&micro;g/m<sup>3</sup></small></h2>
                 <h5 class="card-text text-muted">PM 2.5</h5>
             </div>
         </div>
@@ -36,7 +36,7 @@
     <div class="col-sm-4 mb-3">
         <div class="card">
             <div class="card-body">
-                <h2 class="card-title">{% show_trend trends.BME280_temperature_deg_c %} {{ latest_sensor_data.BME280_temperature_deg_c|floatformat:2 }} <small>&deg;C</small></h2>
+                <h2 class="card-title"><span style="{% temp_colour_map latest_sensor_data.BME280_temperature_deg_c %}">{% show_trend trends.BME280_temperature_deg_c %} {{ latest_sensor_data.BME280_temperature_deg_c|floatformat:2 }}</span> <small>&deg;C</small></h2>
                 <h5 class="card-text text-muted">Temperature</h5>
             </div>
         </div>
