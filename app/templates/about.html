@@ -37,4 +37,9 @@
 <div class="row">
     <p>The colour coding of PM 10 and PM 2.5 values on the homepage are set based on these 24-hour mean level values.</p>
 </div>
+<div class="row">
+    <h2>Web app version</h2>
+    <p>This is <a href="https://github.com/WeakLemonDrink/clarestreet-aq" style="text-decoration: none;" target="_blank">clarestreet-aq</a> version {{app_version}}.</p>
+    <p>Last updated {{ app_last_update|date:"l jS F P e" }}. There {{ sensor_data_total|pluralize:"is,are" }} {{ sensor_data_total }} measurement{{ sensor_data_total|pluralize }} in the database.</p>
+</div>
 {% endblock %}
