@@ -1,14 +1,50 @@
+import datetime
 import json
 import os
 import pytest
 
 from django.conf import settings
+from django.utils import timezone
 
 from freezegun import freeze_time
 
 from aqdata import helpers
 from aqdata.models import SensorData
 from aqdata.tests.conftest import FREEZE_TIME
+
+
+@pytest.mark.django_db
+class TestGetAppLastUpdateDatetime:
+    '''
+    Tests for the `get_app_last_update_datetime` helper function
+    '''
+    def test_function_with_valid_app_last_update(self):
+        '''
+        `get_app_last_update_datetime` should return a `datetime` object of
+        `settings.APP_LAST_UPDATE` if the string is valid
+        '''
+        returned_obj = helpers.get_app_last_update_datetime()
+        # The expected obj should be timezone aware
+        expected_obj = timezone.make_aware(datetime.datetime(2021, 6, 9, 16, 0, 49))
+
+        assert returned_obj == expected_obj
+
+    @pytest.mark.parametrize(
+        'test_input,expected',
+        [
+            ('', None),
+            (None, None),
+            ('2021-6-09 16:00 +0100', None),  # Not the correct format
+        ]
+    )
+    def test_function_with_invalid_app_last_update(self, test_input, expected):
+        '''
+        `get_app_last_update_datetime` should return an empty string if the string returned by
+        `settings.APP_LAST_UPDATE` is not a valid date string
+        '''
+        # Update `settings.APP_LAST_UPDATE` with the `test_input`
+        settings.APP_LAST_UPDATE = test_input
+        assert helpers.get_app_last_update_datetime() == expected
 
 
 @pytest.mark.django_db

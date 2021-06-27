@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.views.generic import TemplateView
 
 from rest_framework import mixins, viewsets
@@ -6,6 +7,25 @@ from rest_framework.renderers import JSONRenderer
 from aqdata import helpers
 from aqdata.models import SensorData
 from aqdata.serializers import SensorDataSerializer
+
+
+class AboutView(TemplateView):
+    '''
+    About view
+    '''
+    template_name = "about.html"
+
+    def get_context_data(self, **kwargs):
+        '''
+        Add the app version info and total database entries to the context
+        '''
+        context = super().get_context_data(**kwargs)
+
+        context['app_last_update'] = helpers.get_app_last_update_datetime()
+        context['app_version'] = settings.APP_VERSION
+        context['sensor_data_total'] = SensorData.objects.all().count()
+
+        return context
 
 
 class HomeView(TemplateView):

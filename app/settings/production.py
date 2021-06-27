@@ -53,3 +53,6 @@ LOGGING = {
 
 # Base url to use when constructing absolute urls for email etc
 BASE_URL = 'https://air-bs5.herokuapp.com'
+
+APP_VERSION = config('APP_VERSION')
+APP_LAST_UPDATE = config('APP_LAST_UPDATE')

@@ -1,6 +1,7 @@
 import datetime
 import json
 
+from django.conf import settings
 from django.utils import timezone
 
 import numpy as np
@@ -21,6 +22,27 @@ UPLOADED_JSON_FIELD_MAP = {
     'SDS_P2': 'SDS_P2_ppm',
     'signal': 'signal_dbm',
 }
+
+
+def get_app_last_update_datetime():
+    '''
+    Gets `APP_LAST_UPDATE` string from settings, converts to a `datetime` object and then returns
+    '''
+    app_last_update_str = settings.APP_LAST_UPDATE
+
+    # Return `None` by default
+    return_dt = None
+
+    if app_last_update_str:
+        try:
+            utc_dt = datetime.datetime.strptime(app_last_update_str, '%Y-%m-%d %H:%M:%S %z')
+            # Make sure the returned object has the right timezone
+            return_dt = utc_dt.astimezone(timezone.get_default_timezone())
+        except ValueError:
+            # If `app_last_update_str` is not in the right format, just skip
+            pass
+
+    return return_dt
 
 
 def get_data_gradient(field):

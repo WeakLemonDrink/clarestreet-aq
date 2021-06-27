@@ -23,3 +23,6 @@ DATABASES = {
         "ATOMIC_REQUESTS": True,
     }
 }
+
+APP_VERSION = 'dev'
+APP_LAST_UPDATE = '2021-06-09 16:00:49 +0100'
