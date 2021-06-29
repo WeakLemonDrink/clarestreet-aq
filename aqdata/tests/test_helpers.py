@@ -76,14 +76,14 @@ class TestGetDataGradient:
         assert result == 0.00
 
     @freeze_time(FREEZE_TIME)
-    def test_function_with_queryset_containing_none(self, sensor_data_set):
+    def test_function_with_queryset_containing_none(self, sensor_data_hour_set):
         '''
         `get_data_gradient` should return 0.000 if `SensorData` filtered over the last hour returns
         a queryset containing `None` values
         A first order line of best fit cannot be calculated if data points contain `None`
         '''
-        # return a entry from the `sensor_data_set` and update to contain a `None` value
-        entry = sensor_data_set.last()
+        # return a entry from the `sensor_data_hour_set` and update to contain a `None` value
+        entry = sensor_data_hour_set.last()
         entry.SDS_P1_ppm = None
         entry.save()
 
@@ -102,7 +102,7 @@ class TestGetDataGradient:
             ('SDS_P2_ppm', 0.012034782608695602),
         ]
     )
-    def test_function_with_valid_data(self, sensor_data_set, test_input, expected):
+    def test_function_with_valid_data(self, sensor_data_hour_set, test_input, expected):
         '''
         `get_data_gradient` should calculate the first order line of best fit over an hours worth
         of `test_input` data, and return the `m` component of the resulting `mx + c`
