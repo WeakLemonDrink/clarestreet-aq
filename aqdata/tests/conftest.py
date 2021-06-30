@@ -47,11 +47,23 @@ def sensor_data():
 
 
 @pytest.fixture
-def sensor_data_set():
+def sensor_data_day_set():
     '''
-    Fixture to create a set of `SensorData` db entries and return the resulting queryset
+    Fixture to create a set of a days worth of `SensorData` db entries and return the resulting
+    queryset
     '''
-    call_command('loaddata', os.path.join(settings.BASE_DIR, 'doc', 'sensor_data_set.json'))
+    call_command('loaddata', os.path.join(settings.BASE_DIR, 'doc', 'sensor_data_day.json'))
+
+    return SensorData.objects.all()
+
+
+@pytest.fixture
+def sensor_data_hour_set():
+    '''
+    Fixture to create a set of an hours worth of `SensorData` db entries and return the resulting
+    queryset
+    '''
+    call_command('loaddata', os.path.join(settings.BASE_DIR, 'doc', 'sensor_data_hour.json'))
 
     return SensorData.objects.all()
 

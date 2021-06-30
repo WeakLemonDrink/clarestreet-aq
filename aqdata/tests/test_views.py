@@ -39,7 +39,7 @@ class TestHomeView:
         ]
     )
     def test_trend_data_saved_to_context(
-        self, client, sensor_data_set, test_input_field, expected
+        self, client, sensor_data_hour_set, test_input_field, expected
     ):
         '''
         `HomeView` view should add values describing the trends in the last hours worth of data
