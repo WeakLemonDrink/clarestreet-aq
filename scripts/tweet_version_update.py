@@ -5,7 +5,7 @@ import tweepy
 
 def run():
     '''
-    Posts a update status to @air-bs5 to publicise the web app has been updated
+    Posts a update status to @AirBs5 to publicise the web app has been updated
 
     Run using the django-extensions `runscript` command
     '''
@@ -19,7 +19,7 @@ def run():
     status_str = (
         'air-bs5 ' + settings.APP_VERSION + ' has been released! Check out'
         ' ' + settings.BASE_URL + ' for live air quality readings in Bristol BS5. #AirQuality'
-        ' AirPollution #Bristol'
+        ' #AirPollution #Bristol'
     )
 
     # Post the status update to twitter
