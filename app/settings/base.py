@@ -116,3 +116,10 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Twitter auth tokens
+TWITTER_ACCESS_TOKEN = config('TWITTER_ACCESS_TOKEN')
+TWITTER_ACCESS_TOKEN_SECRET = config('TWITTER_ACCESS_TOKEN_SECRET')
+TWITTER_API_KEY = config('TWITTER_API_KEY')
+TWITTER_API_SECRET_KEY = config('TWITTER_API_SECRET_KEY')
+TWITTER_BEARER_TOKEN = config('TWITTER_BEARER_TOKEN')
