@@ -75,3 +75,11 @@ class SensorDataViewSet(mixins.CreateModelMixin,
         '''
         request.data.update(helpers.preprocess_uploaded_json(request.data))
         return super().create(request, *args, **kwargs)
+
+    def perform_create(self, serializer):
+        '''
+        Override `perform_create` to perform post-save operations on the newly created
+        `SensorData` entry
+        '''
+        new_entry = serializer.save()
+        new_entry.update_moving_averages()

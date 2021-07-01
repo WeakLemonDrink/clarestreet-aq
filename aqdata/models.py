@@ -2,8 +2,6 @@ import datetime
 import numpy as np
 
 from django.db import models
-from django.dispatch import receiver
-from django.db.models.signals import post_save
 from django.conf import settings
 
 
@@ -47,33 +45,34 @@ class SensorData(models.Model):
 
         return super().save(*args, **kwargs)
 
+    def update_moving_averages(self):
+        '''
+        Gets a queryset of the last 24hrs of data from `self.upload_time`, calculate 24 hour
+        averages for `SDS_P1_ppm` and `SDS_P2_ppm` fields and save to `p1_ppm_24hr_moving_avg` and
+        `p2_ppm_24hr_moving_avg` fields
+        '''
+        # Grab the `SensorData` entries within a 24 range
+        filter_start = self.upload_time - datetime.timedelta(hours=24)
+        filter_stop = self.upload_time
+
+        sensor_data_qs = self._meta.model.objects.filter(
+            upload_time__gte=filter_start, upload_time__lte=filter_stop
+        )
+
+        for target_field, avg_field in [
+                ('SDS_P1_ppm', 'p1_ppm_24hr_moving_avg'), ('SDS_P2_ppm', 'p2_ppm_24hr_moving_avg')
+            ]:
+            # Only save average if `target_field` contains a valid value
+            if getattr(self, target_field) is not None:
+                target_field_array = np.array(sensor_data_qs.values_list(target_field, flat=True))
+                # Strip out any `None` values from the array
+                target_field_array = target_field_array[target_field_array != np.array(None)]
+
+                # Save the mean to the avg_field
+                setattr(self, avg_field, np.mean(target_field_array))
+
+        # Save the instance
+        self.save()
+
     def __str__(self):
         return '{!s} {}'.format(self.id, self.upload_time.strftime('%Y-%m-%d %H:%M:%S'))
-
-
-@receiver(post_save, sender=SensorData)
-def update_moving_averages(sender, instance, **kwargs):
-    '''
-    Gets a queryset of the last 24hrs of data from `instance.upload_time`, calculate 24 hour
-    averages for `SDS_P1_ppm` and `SDS_P2_ppm` fields and save to `p1_ppm_24hr_moving_avg` and
-    `p2_ppm_24hr_moving_avg` fields
-    '''
-    # Grab the `SensorData` entries within a 24 range
-    filter_start = instance.upload_time - datetime.timedelta(hours=24)
-    filter_stop = instance.upload_time
-
-    sensor_data_qs = sender.objects.filter(
-        upload_time__gte=filter_start, upload_time__lte=filter_stop
-    )
-
-    for target_field, avg_field in [
-            ('SDS_P1_ppm', 'p1_ppm_24hr_moving_avg'), ('SDS_P2_ppm', 'p2_ppm_24hr_moving_avg')
-        ]:
-        # Only save average if `target_field` contains a valid value
-        if getattr(instance, target_field) is not None:
-            target_field_array = np.array(sensor_data_qs.values_list(target_field, flat=True))
-            # Strip out any `None` values from the array
-            target_field_array = target_field_array[target_field_array != np.array(None)]
-
-            # Save the mean to the avg_field
-            setattr(instance, avg_field, np.mean(target_field_array))
