@@ -9,7 +9,7 @@ class TestSensorDataSerializer:
     '''
     Tests for the `SensorDataSerializer` model serializer
     '''
-    def test_deserializer_is_valid_true(self, upload_data):
+    def test_deserializer_is_valid_true(self, sensor_data):
         '''
         `SensorDataSerializer` model serializer should create a new `SensorData`
         model entry if valid json data is supplied
@@ -19,16 +19,16 @@ class TestSensorDataSerializer:
         `SensorDataSerializer` `is_valid()` should return `True` if supplied
         with valid json data to deserialize
         '''
-        serializer = SensorDataSerializer(data=upload_data)
+        serializer = SensorDataSerializer(data=sensor_data)
 
         assert serializer.is_valid() is True
 
-    def test_deserializer_creates_new_entry(self, upload_data):
+    def test_deserializer_creates_new_entry(self, sensor_data):
         '''
         `SensorDataSerializer` model serializer should create a new `SensorData`
         model entry if valid json data is supplied
         '''
-        serializer = SensorDataSerializer(data=upload_data)
+        serializer = SensorDataSerializer(data=sensor_data)
 
         # Call `is_valid` first then `save`
         serializer.is_valid()

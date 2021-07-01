@@ -90,6 +90,30 @@ class TestSensorDataViewSet:
         # New `SensorData` entry should exist in the db
         assert SensorData.objects.all().exists() is True
 
+    def test_upload_valid_data_post_calls_sensor_data_update_moving_averages(
+        self, client, upload_data
+    ):
+        '''
+        `SensorDataViewSet` list view should create a new `SensorData` entry if supplied with valid
+        json data
+
+        If data is valid and sent via post request, new `SensorData` entry is created and
+        `p1_ppm_24hr_moving_avg` and `p2_ppm_24hr_moving_avg` fields are automatically populated
+        by `SensorData` `post_save` signal
+        '''
+        client.post(
+            self.request_url, json.dumps(upload_data), content_type="application/json"
+        )
+        # Grab the new entry
+        new_entry = SensorData.objects.all().first()
+
+        # `SensorData` entry `p1_ppm_24hr_moving_avg` and `p2_ppm_24hr_moving_avg` fields should
+        # be filled following `save`
+        assert new_entry.SDS_P1_ppm is not None
+        assert new_entry.SDS_P2_ppm is not None
+        assert new_entry.p1_ppm_24hr_moving_avg is not None
+        assert new_entry.p2_ppm_24hr_moving_avg is not None
+
     def test_upload_invalid_data_post_returns_http_400_bad_request(self, client, upload_data):
         '''
         `SensorDataViewSet` list view should create a new `SensorData` entry if supplied with
