@@ -1,7 +1,9 @@
+import datetime
 import json
 import pytest
 
 from django.urls import reverse
+from django.utils.http import urlencode
 
 from freezegun import freeze_time
 from rest_framework import status
@@ -146,3 +148,26 @@ class TestSensorDataViewSet:
 
         # `SensorData` db should be empty
         assert SensorData.objects.all().exists() is False
+
+    def test_list_view_filtering_by_upload_time(self, client, sensor_data_hour_set):
+        '''
+        `SensorDataViewSet` list view should return filtered `SensorData` entries if supplied with
+        valid querystring parameters
+        Filtering by `upload_time` allows us to return data suitable for plotting on a chart
+        '''
+        upload_time_before = sensor_data_hour_set.last().upload_time
+        upload_time_after = upload_time_before - datetime.timedelta(minutes=30)
+
+        response = client.get(
+            self.request_url + '?' + urlencode(
+                {
+                    'upload_time_after': upload_time_after.isoformat(),
+                    'upload_time_before': upload_time_before.isoformat()
+                }
+            )
+        )
+
+        # Response should contain HTTP_200_OK to confirm filter works correctly
+        assert response.status_code == status.HTTP_200_OK
+        # Returned items should be less than the original queryset
+        assert len(json.loads(response.content)) < sensor_data_hour_set.count()

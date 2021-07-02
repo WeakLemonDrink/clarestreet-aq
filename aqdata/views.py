@@ -1,10 +1,12 @@
 from django.conf import settings
 from django.views.generic import TemplateView
 
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import mixins, viewsets
 from rest_framework.renderers import JSONRenderer
 
 from aqdata import helpers
+from aqdata.filters import SensorDataFilter
 from aqdata.models import SensorData
 from aqdata.serializers import SensorDataSerializer
 
@@ -65,6 +67,8 @@ class SensorDataViewSet(mixins.CreateModelMixin,
     '''
     Viewset for creating and retrieving `SensorData` entries
     '''
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = SensorDataFilter
     queryset = SensorData.objects.all()
     renderer_classes = [JSONRenderer]
     serializer_class = SensorDataSerializer
