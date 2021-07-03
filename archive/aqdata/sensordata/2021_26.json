@@ -5595,7 +5595,7 @@
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-28T10:37:52.346Z",
         "app_version": null,
-        "BME280_humidity_pc": NaN,
+        "BME280_humidity_pc": null,
         "BME280_pressure_hpa": 1012.5147000000001,
         "BME280_temperature_deg_c": 15.68,
         "interval": 145000,

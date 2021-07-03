@@ -12793,7 +12793,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-22T04:33:52.890Z",
-        "BME280_humidity_pc": NaN,
+        "BME280_humidity_pc": null,
         "BME280_pressure_hpa": 1017.3922,
         "BME280_temperature_deg_c": 10.38,
         "interval": 145000,
