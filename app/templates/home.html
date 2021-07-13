@@ -63,4 +63,12 @@
     <p>There is no data yet!</p>
 </div>
 {% endif %}
-{% endblock %}
+{% endblock content %}
+
+{% block script %}
+<script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+{% endblock script %}
