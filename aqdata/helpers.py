@@ -128,4 +128,4 @@ def trim_sensor_data_db():
     above `MAX_DB_ENTRIES` deletes oldest entries until the result is below `MAX_DB_ENTRIES`
     '''
     while SensorData.objects.count() >= settings.MAX_DB_ENTRIES:
-        SensorData.objects.last().delete()
+        SensorData.objects.first().delete()

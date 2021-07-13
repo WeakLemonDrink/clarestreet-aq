@@ -188,3 +188,21 @@ class TestTrimSensorDataDb:
         helpers.trim_sensor_data_db()
         # Confirm number of db entries has been updated
         assert SensorData.objects.count() == expected
+
+    def test_oldest_db_entries_are_trimmed(self, sensor_data_day_set):
+        '''
+        `trim_sensor_data_db` function should trim the number of `SensorData` entries in the
+        database to be below `MAX_DB_ENTRIES`
+        If entries are trimmed, the oldest entries should be removed
+        '''
+        # Update settings
+        settings.MAX_DB_ENTRIES = 570
+
+        oldest_upload_time = SensorData.objects.first().upload_time
+
+        # Perform trim if needed
+        helpers.trim_sensor_data_db()
+
+        new_oldest_upload_time = SensorData.objects.first().upload_time
+        # Confirm new oldest time is newer than the previous oldest time!
+        assert new_oldest_upload_time > oldest_upload_time
