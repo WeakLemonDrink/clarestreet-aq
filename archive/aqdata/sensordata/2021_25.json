@@ -71788,6 +71788,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:08:20.823Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.03,
         "BME280_pressure_hpa": 1011.3741000000001,
         "BME280_temperature_deg_c": 18.43,
@@ -71797,7 +71798,9 @@
         "samples_per_sec": 4848051,
         "SDS_P1_ppm": 19.3,
         "SDS_P2_ppm": 17.25,
-        "signal_dbm": -77
+        "signal_dbm": -77,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -71807,6 +71810,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:10:50.068Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.3,
         "BME280_pressure_hpa": 1011.5294,
         "BME280_temperature_deg_c": 18.48,
@@ -71816,7 +71820,9 @@
         "samples_per_sec": 4850043,
         "SDS_P1_ppm": 20.23,
         "SDS_P2_ppm": 17.1,
-        "signal_dbm": -83
+        "signal_dbm": -83,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -71826,6 +71832,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:13:18.569Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.46,
         "BME280_pressure_hpa": 1011.6456,
         "BME280_temperature_deg_c": 18.45,
@@ -71835,7 +71842,9 @@
         "samples_per_sec": 4845474,
         "SDS_P1_ppm": 19.85,
         "SDS_P2_ppm": 17.75,
-        "signal_dbm": -82
+        "signal_dbm": -82,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -71845,6 +71854,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:15:44.555Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.23,
         "BME280_pressure_hpa": 1011.2688,
         "BME280_temperature_deg_c": 18.29,
@@ -71854,7 +71864,9 @@
         "samples_per_sec": 4851385,
         "SDS_P1_ppm": 19.73,
         "SDS_P2_ppm": 16.77,
-        "signal_dbm": -85
+        "signal_dbm": -85,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -71864,6 +71876,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:18:11.226Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.27,
         "BME280_pressure_hpa": 1011.6288000000001,
         "BME280_temperature_deg_c": 18.44,
@@ -71873,7 +71886,9 @@
         "samples_per_sec": 4863746,
         "SDS_P1_ppm": 18.77,
         "SDS_P2_ppm": 16.73,
-        "signal_dbm": -83
+        "signal_dbm": -83,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -71883,6 +71898,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:20:38.199Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.35,
         "BME280_pressure_hpa": 1011.5188,
         "BME280_temperature_deg_c": 18.37,
@@ -71892,7 +71908,9 @@
         "samples_per_sec": 4860416,
         "SDS_P1_ppm": 18.88,
         "SDS_P2_ppm": 16.75,
-        "signal_dbm": -84
+        "signal_dbm": -84,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -71902,6 +71920,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:23:04.815Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.41,
         "BME280_pressure_hpa": 1011.5231,
         "BME280_temperature_deg_c": 18.44,
@@ -71911,7 +71930,9 @@
         "samples_per_sec": 4828182,
         "SDS_P1_ppm": 18.52,
         "SDS_P2_ppm": 16.6,
-        "signal_dbm": -87
+        "signal_dbm": -87,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -71921,6 +71942,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:25:34.683Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.23,
         "BME280_pressure_hpa": 1011.5334,
         "BME280_temperature_deg_c": 18.42,
@@ -71930,7 +71952,9 @@
         "samples_per_sec": 4841279,
         "SDS_P1_ppm": 18.83,
         "SDS_P2_ppm": 16.7,
-        "signal_dbm": -84
+        "signal_dbm": -84,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -71940,6 +71964,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:28:00.891Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.24,
         "BME280_pressure_hpa": 1011.6138000000001,
         "BME280_temperature_deg_c": 18.4,
@@ -71949,7 +71974,9 @@
         "samples_per_sec": 4845091,
         "SDS_P1_ppm": 18.3,
         "SDS_P2_ppm": 16.38,
-        "signal_dbm": -85
+        "signal_dbm": -85,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -71959,6 +71986,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:30:29.265Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.48,
         "BME280_pressure_hpa": 1011.3791000000001,
         "BME280_temperature_deg_c": 18.21,
@@ -71968,7 +71996,9 @@
         "samples_per_sec": 4836705,
         "SDS_P1_ppm": 18.6,
         "SDS_P2_ppm": 16.65,
-        "signal_dbm": -84
+        "signal_dbm": -84,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -71978,6 +72008,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:32:55.643Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.48,
         "BME280_pressure_hpa": 1011.5544000000001,
         "BME280_temperature_deg_c": 18.36,
@@ -71987,7 +72018,9 @@
         "samples_per_sec": 4827421,
         "SDS_P1_ppm": 17.8,
         "SDS_P2_ppm": 15.73,
-        "signal_dbm": -84
+        "signal_dbm": -84,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -71997,6 +72030,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:35:22.257Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.44,
         "BME280_pressure_hpa": 1011.3869000000001,
         "BME280_temperature_deg_c": 18.23,
@@ -72006,7 +72040,9 @@
         "samples_per_sec": 4845592,
         "SDS_P1_ppm": 19.17,
         "SDS_P2_ppm": 16.88,
-        "signal_dbm": -82
+        "signal_dbm": -82,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -72016,6 +72052,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:37:48.414Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.38,
         "BME280_pressure_hpa": 1011.1397000000001,
         "BME280_temperature_deg_c": 18.1,
@@ -72025,7 +72062,9 @@
         "samples_per_sec": 4862388,
         "SDS_P1_ppm": 18.13,
         "SDS_P2_ppm": 15.7,
-        "signal_dbm": -83
+        "signal_dbm": -83,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -72035,6 +72074,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:40:15.855Z",
+        "app_version": null,
         "BME280_humidity_pc": 72.66,
         "BME280_pressure_hpa": 1011.4591,
         "BME280_temperature_deg_c": 18.34,
@@ -72044,7 +72084,9 @@
         "samples_per_sec": 4852309,
         "SDS_P1_ppm": 18.9,
         "SDS_P2_ppm": 16.4,
-        "signal_dbm": -81
+        "signal_dbm": -81,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -72054,6 +72096,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:42:43.589Z",
+        "app_version": null,
         "BME280_humidity_pc": 73.01,
         "BME280_pressure_hpa": 1011.3622,
         "BME280_temperature_deg_c": 18.2,
@@ -72063,7 +72106,9 @@
         "samples_per_sec": 4865392,
         "SDS_P1_ppm": 22.05,
         "SDS_P2_ppm": 16.3,
-        "signal_dbm": -77
+        "signal_dbm": -77,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -72073,6 +72118,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:45:09.600Z",
+        "app_version": null,
         "BME280_humidity_pc": 73.85,
         "BME280_pressure_hpa": 1011.5634,
         "BME280_temperature_deg_c": 18.22,
@@ -72082,7 +72128,9 @@
         "samples_per_sec": 4880027,
         "SDS_P1_ppm": 18.3,
         "SDS_P2_ppm": 15.7,
-        "signal_dbm": -79
+        "signal_dbm": -79,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -72092,6 +72140,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:47:36.751Z",
+        "app_version": null,
         "BME280_humidity_pc": 74.79,
         "BME280_pressure_hpa": 1011.0219000000001,
         "BME280_temperature_deg_c": 17.86,
@@ -72101,7 +72150,9 @@
         "samples_per_sec": 4878687,
         "SDS_P1_ppm": 18.2,
         "SDS_P2_ppm": 16.33,
-        "signal_dbm": -79
+        "signal_dbm": -79,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -72111,6 +72162,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:50:05.785Z",
+        "app_version": null,
         "BME280_humidity_pc": 75.41,
         "BME280_pressure_hpa": 1011.6003000000001,
         "BME280_temperature_deg_c": 18.05,
@@ -72120,7 +72172,9 @@
         "samples_per_sec": 4860748,
         "SDS_P1_ppm": 17.58,
         "SDS_P2_ppm": 15.68,
-        "signal_dbm": -79
+        "signal_dbm": -79,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -72130,6 +72184,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:52:32.035Z",
+        "app_version": null,
         "BME280_humidity_pc": 76.44,
         "BME280_pressure_hpa": 1011.5438,
         "BME280_temperature_deg_c": 17.97,
@@ -72139,7 +72194,9 @@
         "samples_per_sec": 4854813,
         "SDS_P1_ppm": 19.95,
         "SDS_P2_ppm": 17.15,
-        "signal_dbm": -84
+        "signal_dbm": -84,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -72149,6 +72206,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:54:59.247Z",
+        "app_version": null,
         "BME280_humidity_pc": 77.44,
         "BME280_pressure_hpa": 1011.3106,
         "BME280_temperature_deg_c": 17.6,
@@ -72158,7 +72216,9 @@
         "samples_per_sec": 4844407,
         "SDS_P1_ppm": 18.27,
         "SDS_P2_ppm": 16.38,
-        "signal_dbm": -85
+        "signal_dbm": -85,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
@@ -72168,6 +72228,7 @@
         "esp8266id": 14907210,
         "software_version": "NRZ-2020-133",
         "upload_time": "2021-06-27T19:57:25.245Z",
+        "app_version": null,
         "BME280_humidity_pc": 78.33,
         "BME280_pressure_hpa": 1011.5566,
         "BME280_temperature_deg_c": 17.61,
@@ -72177,7 +72238,9 @@
         "samples_per_sec": 4860827,
         "SDS_P1_ppm": 19.02,
         "SDS_P2_ppm": 16.2,
-        "signal_dbm": -85
+        "signal_dbm": -85,
+        "p1_ppm_24hr_moving_avg": null,
+        "p2_ppm_24hr_moving_avg": null
     }
 },
 {
