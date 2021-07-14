@@ -123,3 +123,6 @@ TWITTER_ACCESS_TOKEN_SECRET = config('TWITTER_ACCESS_TOKEN_SECRET')
 TWITTER_API_KEY = config('TWITTER_API_KEY')
 TWITTER_API_SECRET_KEY = config('TWITTER_API_SECRET_KEY')
 TWITTER_BEARER_TOKEN = config('TWITTER_BEARER_TOKEN')
+
+# Set to the max number of entries allowed by the heroku hobby account
+MAX_DB_ENTRIES = config('MAX_DB_ENTRIES')

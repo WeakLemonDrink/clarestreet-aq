@@ -120,3 +120,12 @@ def preprocess_uploaded_json(request_data):
         request_data['BME280_pressure_hpa'] = str(pressure_pa * (10**-2))
 
     return request_data
+
+
+def trim_sensor_data_db():
+    '''
+    Function checks the number of entries in the `SensorData` db table, and if the result is
+    above `MAX_DB_ENTRIES` deletes oldest entries until the result is below `MAX_DB_ENTRIES`
+    '''
+    while SensorData.objects.count() >= settings.MAX_DB_ENTRIES:
+        SensorData.objects.first().delete()

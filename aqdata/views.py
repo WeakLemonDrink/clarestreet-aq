@@ -83,3 +83,5 @@ class SensorDataViewSet(mixins.CreateModelMixin,
         '''
         new_entry = serializer.save()
         new_entry.update_moving_averages()
+        # Trim the length of the db if required
+        helpers.trim_sensor_data_db()

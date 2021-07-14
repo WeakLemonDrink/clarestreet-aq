@@ -155,3 +155,54 @@ class TestPreprocessUploadedJson:
             expected_json = json.load(f)
 
         assert processed_json == expected_json
+
+
+@pytest.mark.django_db
+class TestTrimSensorDataDb:
+    '''
+    Tests for the `trim_sensor_data_db` helper function
+
+    `sensor_data_day_set` fixture contains 570 entries
+    '''
+    @pytest.mark.parametrize(
+        'test_input,expected',
+        [
+            (100, 99),  # Max of 100 should delete all but 99 entries
+            (570, 569),  # Max of 570 should delete 1 entry
+            (571, 570),  # Max of 571 should not delete any entries
+            (572, 570),  # Max of 572 should not delete any entries
+        ]
+    )
+    def test_number_of_db_entries_is_trimmed(self, sensor_data_day_set, test_input, expected):
+        '''
+        `trim_sensor_data_db` function should trim the number of `SensorData` entries in the
+        database to be below `MAX_DB_ENTRIES`
+        '''
+        # Check that the db contains the expected number of entries
+        assert SensorData.objects.count() == 570
+
+        # Update settings
+        settings.MAX_DB_ENTRIES = test_input
+
+        # Perform trim if needed
+        helpers.trim_sensor_data_db()
+        # Confirm number of db entries has been updated
+        assert SensorData.objects.count() == expected
+
+    def test_oldest_db_entries_are_trimmed(self, sensor_data_day_set):
+        '''
+        `trim_sensor_data_db` function should trim the number of `SensorData` entries in the
+        database to be below `MAX_DB_ENTRIES`
+        If entries are trimmed, the oldest entries should be removed
+        '''
+        # Update settings
+        settings.MAX_DB_ENTRIES = 570
+
+        oldest_upload_time = SensorData.objects.first().upload_time
+
+        # Perform trim if needed
+        helpers.trim_sensor_data_db()
+
+        new_oldest_upload_time = SensorData.objects.first().upload_time
+        # Confirm new oldest time is newer than the previous oldest time!
+        assert new_oldest_upload_time > oldest_upload_time
